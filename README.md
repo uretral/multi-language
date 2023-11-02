@@ -4,7 +4,7 @@ laravel-admin Multi Language
 ## Install
 
 ```
-composer require laravel-admin-extensions/multi-language
+composer require uretral/multi-language
 ```
 
 ## Config
@@ -22,10 +22,10 @@ In `config/admin.php`
             // the value is used to show
             'languages' => [
                 'en' => 'English',
-                'zh-CN' => '简体中文',
+                'ru' => 'Русский',
             ],
             // default locale
-            'default' => 'zh-CN',
+            'default' => 'ru',
             // if or not show multi-language login page, optional, default is true
             'show-login-page' => true,
             // if or not show multi-language navbar, optional, default is true
