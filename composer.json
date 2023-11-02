@@ -5,6 +5,7 @@
     "keywords": ["laravel-admin", "extension"],
     "homepage": "https://github.com/laravel-admin-extensions/multi-language",
     "license": "MIT",
+    "version": "1.0",
     "authors": [
         {
             "name": "wangxk",
