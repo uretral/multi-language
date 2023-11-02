@@ -18,7 +18,6 @@
     "require-dev": {
         "phpunit/phpunit": "~6.0"
     },
-    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "KevinSoft\\MultiLanguage\\": "src/"
@@ -30,5 +29,6 @@
                 "KevinSoft\\MultiLanguage\\MultiLanguageServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
