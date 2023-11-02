@@ -1,5 +1,5 @@
 <li class="dropdown messages-menu">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" rel="{{\Cookie::get('locale')}}">
         <i class="fa fa-language"></i>
     </a>
     <ul class="dropdown-menu">
@@ -9,7 +9,7 @@
 
                 @foreach($languages as $key => $language)
                     <li><!-- start message -->
-                        <a class="language" href="#" data-id="{{$key}}">
+                        <a class="language" href="#" data-id="{{$key}}" >
                             {{$language}}
                             @if($key == $current)
                                 <i class="fa fa-check pull-right"></i>
