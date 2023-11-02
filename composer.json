@@ -1,6 +1,6 @@
 {
-    "name": "laravel-admin-extensions/multi-language",
-    "description": "适用于laravel-admin的多语言支持扩展",
+    "name": "uretral/multi-language",
+    "description": "multi-language",
     "type": "library",
     "keywords": ["laravel-admin", "extension"],
     "homepage": "https://github.com/laravel-admin-extensions/multi-language",
