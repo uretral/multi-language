@@ -1,13 +1,13 @@
 <?php
 
 
-namespace KevinSoft\MultiLanguage\Widgets;
+namespace Uretral\MultiLanguage\Widgets;
 
 
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Log;
-use KevinSoft\MultiLanguage\MultiLanguage;
+use Uretral\MultiLanguage\MultiLanguage;
 
 class LanguageMenu implements Renderable
 {

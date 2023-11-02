@@ -21,13 +21,13 @@
     },
     "autoload": {
         "psr-4": {
-            "KevinSoft\\MultiLanguage\\": "src/"
+            "Uretral\\MultiLanguage\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "uretral\\MultiLanguage\\MultiLanguageServiceProvider"
+                "Uretral\\MultiLanguage\\MultiLanguageServiceProvider"
             ]
         }
     },

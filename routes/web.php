@@ -1,7 +1,7 @@
 <?php
 
-use KevinSoft\MultiLanguage\Http\Controllers\MultiLanguageController;
-use KevinSoft\MultiLanguage\MultiLanguage;
+use Uretral\MultiLanguage\Http\Controllers\MultiLanguageController;
+use Uretral\MultiLanguage\MultiLanguage;
 
 Route::post('/locale', MultiLanguageController::class.'@locale');
 if(MultiLanguage::config("show-login-page", true)) {

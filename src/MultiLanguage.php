@@ -1,6 +1,6 @@
 <?php
 
-namespace KevinSoft\MultiLanguage;
+namespace Uretral\MultiLanguage;
 
 use Encore\Admin\Extension;
 

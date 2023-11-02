@@ -1,12 +1,12 @@
 <?php
 
-namespace KevinSoft\MultiLanguage\Http\Controllers;
+namespace Uretral\MultiLanguage\Http\Controllers;
 
 use Encore\Admin\Layout\Content;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Request;
-use KevinSoft\MultiLanguage\MultiLanguage;
+use Uretral\MultiLanguage\MultiLanguage;
 
 class MultiLanguageController extends Controller
 {
