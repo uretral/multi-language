@@ -3,7 +3,7 @@
     "description": "multi-language",
     "type": "library",
     "keywords": ["laravel-admin", "extension"],
-    "homepage": "https://github.com/laravel-admin-extensions/multi-language",
+    "homepage": "https://github.com/uretral/multi-language",
     "license": "MIT",
     "version": "1.0",
     "authors": [
@@ -27,7 +27,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "KevinSoft\\MultiLanguage\\MultiLanguageServiceProvider"
+                "uretral\\MultiLanguage\\MultiLanguageServiceProvider"
             ]
         }
     },
