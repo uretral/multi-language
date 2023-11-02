@@ -22,6 +22,7 @@ class MultiLanguageMiddleware
             $default = MultiLanguage::config('default');
             App::setLocale($default);
         }
+
         return $next($request);
     }
 }
