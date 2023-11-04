@@ -7,6 +7,7 @@ namespace Uretral\MultiLanguage\Widgets;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Log;
+use Modules\Admin\Entities\Country;
 use Uretral\MultiLanguage\MultiLanguage;
 
 class LanguageMenu implements Renderable
@@ -19,12 +20,34 @@ class LanguageMenu implements Renderable
      */
     public function render()
     {
-        $current = MultiLanguage::config('default');
-        $cookie_name = MultiLanguage::config('cookie-name', 'locale');
-        if(Cookie::has($cookie_name)) {
-            $current = Cookie::get($cookie_name);
+        $currentLocale = MultiLanguage::config('default_locale');
+        $currentCountry = MultiLanguage::config('default_country');
+        $currentModule = MultiLanguage::config('default_module');
+
+        $cookieLocale = MultiLanguage::config('cookie-locale', 'locale');
+        $cookieCountry = MultiLanguage::config('cookie-country', 'country');
+        $cookieModule = MultiLanguage::config('cookie-module', 'module');
+
+        if (Cookie::has($cookieLocale)) {
+            $currentLocale = Cookie::get($cookieLocale);
         }
+
+        if (Cookie::has($cookieCountry)) {
+            $currentCountry = Cookie::get($cookieCountry);
+        }
+
+        if (Cookie::has($cookieModule)) {
+            $currentModule = Cookie::get($cookieModule);
+        }
+
         $languages = MultiLanguage::config("languages");
-        return view("multi-language::language-menu", compact('languages', 'current'))->render();
+        $countries = MultiLanguage::config("countries");
+        $modules = MultiLanguage::config("modules");
+
+        return view("multi-language::language-menu", compact([
+            'languages', 'currentLocale',
+            'countries', 'currentCountry',
+            'modules', 'currentModule',
+        ]))->render();
     }
 }

@@ -3,6 +3,7 @@
 namespace Uretral\MultiLanguage;
 
 use Encore\Admin\Facades\Admin;
+use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
 use Uretral\MultiLanguage\Widgets\LanguageMenu;
 

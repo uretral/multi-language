@@ -11,15 +11,16 @@ class MultiLanguageMiddleware
 {
     public function handle($request, Closure $next)
     {
-        config(['admin.auth.excepts' => ['auth/login','locale']]);
+        config(['admin.auth.excepts' => ['auth/login', 'locale']]);
 
         $languages = MultiLanguage::config('languages');
-        $cookie_name = MultiLanguage::config('cookie-name', 'locale');
 
-        if (Cookie::has($cookie_name) && array_key_exists(Cookie::get($cookie_name), $languages)) {
-            App::setLocale(Cookie::get($cookie_name));
+        $cookieLocale = MultiLanguage::config('cookie-locale', 'locale');
+
+        if (Cookie::has($cookieLocale) && array_key_exists(Cookie::get($cookieLocale), $languages)) {
+            App::setLocale(Cookie::get($cookieLocale));
         } else {
-            $default = MultiLanguage::config('default');
+            $default = MultiLanguage::config('default_locale');
             App::setLocale($default);
         }
 

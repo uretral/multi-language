@@ -15,25 +15,54 @@ First, add extension config
 In `config/admin.php`
 
 ```
-    'extensions' => [
         'multi-language' => [
             'enable' => true,
-            // the key should be same as var locale in config/app.php
-            // the value is used to show
+
+            'cookie-locale' => 'locale',
+            'default_locale' => 'ru',
             'languages' => [
                 'en' => 'English',
                 'ru' => 'Русский',
             ],
-            // default locale
-            'default' => 'ru',
-            // if or not show multi-language login page, optional, default is true
-            'show-login-page' => true,
-            // if or not show multi-language navbar, optional, default is true
+
+            'cookie-country' => 'country',
+            'default_country' => 'ru',
+            'countries' => [
+                'ru' => [
+                    'title_ru' => 'Россия',
+                    'title_en' => 'Russia',
+                    'flag' => 'assets/admin/img/flags/ru.svg'
+                ],
+                'ae' => [
+                    'title_ru' => 'Эмираты',
+                    'title_en' => 'Emirates',
+                    'flag' => 'assets/admin/img/flags/ae.svg'
+                ],
+                'tr' => [
+                    'title_ru' => 'Турция',
+                    'title_en' => 'Turkey',
+                    'flag' => 'assets/admin/img/flags/tr.svg'
+                ],
+            ],
+
+            'cookie-module' => 'module',
+            'default_module' => 'tenant',
+            'modules' => [
+                'tenant' => [
+                    'ru' => 'Жилец',
+                    'en' => 'Tenant',
+                ],
+                'my' => [
+                    'ru' => 'Собственник',
+                    'en' => 'Landlord',
+                ]
+            ],
+
             'show-navbar' => true,
-            // the cookie name for the multi-language var, optional, default is 'locale'
-            'cookie-name' => 'locale'
+            'show-login-page' => true,
+
+
         ],
-    ],
 ```
 
 Then, add except route to auth
@@ -53,9 +82,3 @@ In `config/admin.php`, add `locale` to `auth.excepts`
     ],
 
 ```
-
-## ScreenShots
-
-![login](https://user-images.githubusercontent.com/20313390/60640921-ff109480-9e5b-11e9-8ec8-aee897a8bdcb.jpg)
-![login1](https://user-images.githubusercontent.com/20313390/60640924-0041c180-9e5c-11e9-8a2d-539d6214d069.jpg)
-![language](https://user-images.githubusercontent.com/20313390/60640919-fc15a400-9e5b-11e9-962d-175fb2f24da1.jpg)
